@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- OPTIONAL: description -->
+    <meta name="description" content="">
+    <!-- OPTIONAL: author -->
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon.png" />
+
+		<!-- EDIT: title -->
+    <title>Sudhir's Website!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Link the main.css stylesheet -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- OPTIONAL: Google Fonts (don't forget to edit main.css also) -->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+	<div id="header" class="header">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-12">
+					<!-- EDIT: name -->
+					<h1>Sudhir Ganesan</h1>
+					<!-- EDIT: title | email -->
+					<h3>DevOps Engineer | <a href="mailto:ganesansudhir18@gmail.com" target="_blank">ganesansudhir18@gmail.com</a></h3>
+				</div><!--/.col-lg-12 -->
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/.header -->
+
+
+	<section id="about" name="about"></section>
+	<div class="about">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>ABOUT</h5>
+				</div>
+				<div class="col-lg-6">
+					<!-- EDIT: about -->
+					<p>I enjoy using automation to build repeatable, streamlined processes.</p>
+				</div>
+				<div class="col-lg-3">
+					<!-- EDIT: download link -->
+					<p><a href="https://s3.amazonaws.com/sudhir-resume/sudhir-resume.pdf" target="_blank"><i class="icon-file"></i> <sm>DOWNLOAD PDF</sm></a></p>
+				</div>
+
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/ #intro -->
+
+
+	<section id="resume" name="resume"></section>
+	<!-- EDUCATION SECTION -->
+	<div class="container desc">
+		<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>EDUCATION</h5>
+				</div>
+				<!-- EDIT: education line 1 -->
+				<div class="col-lg-6">
+					<p><t>University of Iowa</t><br/>
+						Bachelor of Arts - BA, Political Science
+						<!--<br/><i>Extra info here</i>-->
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>December 2014</sm><br/>
+					</p>
+				</div>
+
+		</div><!--/.row -->
+		<br>
+		<hr>
+	</div><!--/.container -->
+
+	<!-- WORK SECTION -->
+	<div class="container desc">
+		<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>WORK</h5>
+				</div>
+				<!-- EDIT: work line 1 -->
+				<div class="col-lg-6">
+					<p class="tight"><t>Systems Engineer III - DevOps </t><br/>
+						Elsevier <br/>
+						<a href="https://www.elsevier.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Elsevier.svg/2000px-Elsevier.svg.png" width="50" height="50"/></a><br/>
+					</p>
+          <p><more>Working on the Education Technology (EdTech) platform. Will be using tools such as OpenShift, Docker, Kubernetes, AWS, Terraform, Ansible/Puppet and more. Stay tuned for new projects!</more></p>
+					<ul>
+            <li>Helping with the migration from EC2 Container Service (ECS) to OpenShift Origin for a containerized microservices platform.</li>
+            <li>Migrating Jenkins instances from on-premise servers to AWS.</li>
+            <li>Currently the organization has a Jenkins instance for each application platform. I am in the process of creating an overarching Jenkins master server with multiple Jenkins slave agents connected via SSH to build and deploy each application. This will allow for better collaboration between the operations team to help diagnose issues with builds and deployments.</li>
+            <li>Creating a Disaster Recovery (DR) plan for the Jenkins Master instance. One part is backing up the $JENKINS_HOME directory nightly to a S3 bucket for quick restore. Another part is codifying the infrastructure via Terraform and Puppet. This way we can easily spin up a new Jenkins Master server that is fully configured with minimal downtime.</li>
+            <li>Creating Jenkins slave servers in AWS via Terraform and configuring them via Puppet</li>
+            <li>Setting up monitoring for the Jenkins Master and Slave nodes via Graphite and Grafana. Graphite collects the metrics via the Graphite Plugin. Set up Slack webhook to send Grafana alerts anytime there are issues with either the Master or Slave nodes.</li>
+          </ul>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>AUGUST 2017 - CURRENT <br />
+					Philadelphia, PA, USA</sm></p>
+				</div>
+
+				<!-- EDIT: work line 2-->
+				<div class="col-lg-6 col-lg-offset-3">
+					<p class="tight"><t>Junior Linux Engineer (Contract)</t><br/>
+						Comcast <br/>
+						<a href="https://www.xfinity.com/" target="_blank"><img src="http://corporate.comcast.com/images/Comcast-Logo.png" width="100" height="56"/></a><br/>
+					</p>
+          <ul>
+            <li>Helped to build out automated Dev environment for Open-Xchange using Terraform and Ansible.</li>
+            <li>Created a script to help integrate code review using Gerrit and Git repos. This script mirrored repos and was deployed in a Jenkins pipeline to continually update the repos.</li>
+            <li>Took the lead to automate the iOS build and deployment process in Jenkins. Modified previously used manual build scripts to work with the Jenkins automated process. Helped to get the app to build with Xcode 8.</li>
+            <li>Converted numerous projects from using Libdeploy (in-house configuration management tool) to Ansible.</li>
+            <li>Automated the creation of OpenStack virtual machines using OpenStack Ansible module. This is very similar to Terraform but I can create servers and then immediately run playbooks to configure them. This made the process of creation to configuration quicker and more efficient.</li>
+            <li>Used Ansible and Terraform to setup and configure SonarQube for code quality analysis. Setup external plugin for Go (Golang) code analysis.</li>
+            <li>Used Molecule and Testinfra to test numerous Ansible roles.</li>
+            <li>Used Packer to create OpenStack images and used those images in Terraform to create VMs.</li>
+            <li>Set up a self-hosted Jenkins instance with a master and four agents. Automated the configuration of the infrastructure via Ansible. Using Ansible to add slaves to master server. Successfully troubleshooted build issues to allow Scala project to get built. Configured SSL and load balancing for failover.</li>
+          </ul>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>JULY 2016 - AUGUST 2017 <br />
+					Philadelphia, PA, USA</sm></p>
+				</div>
+		</div><!--/.row -->
+		<br>
+		<hr>
+	</div><!--/.container -->
+
+
+	<!-- AWARDS SECTION -->
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>CERTIFICATIONS</h5>
+				</div>
+
+				<!-- EDIT: awards line 1-->
+				<div class="col-lg-6">
+					<p><t>Red Hat Certified System Administrator</t><br/>
+						Red Hat<br/>
+						License 160-089-041<br/>
+						<a href="https://www.redhat.com/rhtapps/certification/verify/?certId=160-089-041&isSearch=False&verify=Verify" target="_blank">View Certificate</a><br/>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>JUNE 2016</sm></p>
+				</div>
+
+		</div><!--/.row -->
+		<br>
+	</div><!--/.container -->
+
+
+	<section id="contact" name="contact"></section>
+	<!--FOOTER DESCRIPTION -->
+	<div id="footwrap" class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>CONTACT</h5>
+				</div>
+				<!-- EDIT: email -->
+				<div class="col-lg-6">
+					<p><t>Email</t><br/>
+						<a href="mailto:ganesansudhir18@gmail.com" target="_blank" class="mail">ganesansudhir18@gmail.com</a> <br/>
+					</p>
+					<!-- EDIT: address -->
+					<p><t>Address</t><br/>
+						Philadelphia, PA 19103 <br/>
+						United States of America<br/>
+					</p>
+					<!-- EDIT: phone number -->
+					<p><t>Phone</t><br/>
+						<a href="tel:2039271232" class="tel">(203) 927-1232</a> <br/>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SOCIAL LINKS</sm></p>
+					<p>
+						<!-- EDIT: Social Links. Replace # with your URL for each -->
+						<a href="https://twitter.com/sudhirganesan?lang=en" target="_blank"><i class="icon-twitter"></i></a>
+						<a href="https://github.com/redsox2002" target="_blank"><i class="icon-github"></i></a>
+						<a href="https://www.linkedin.com/in/sudhirganesan/" target="_blank"><i class="icon-linkedin"></i></a>
+						<!--<a href="#" target="_blank"><i class="icon-github"></i></a>-->
+					</p>
+				</div>
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/ #footer -->
+  </body>
+</html>
+
